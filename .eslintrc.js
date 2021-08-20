@@ -3,17 +3,16 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  extends: ['plugin:react/recommended', 'airbnb'],
-  parser: '@babel/eslint-parser',
+  extends: ['plugin:react/recommended', 'airbnb', 'prettier'],
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
-      experimentalObjectRestSpread: true,
-      modules: true
+      jsx: true
     },
-    ecmaVersion: 2020,
+    ecmaVersion: 12,
     sourceType: 'module'
   },
-  plugins: ['react', 'prettier', 'babel'],
-  rules: {}
+  plugins: ['react'],
+  rules: {
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }]
+  }
 };
