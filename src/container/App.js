@@ -9,6 +9,8 @@ function App() {
   const [heroes, setHeroes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
+  const [search, setSearch] = useState('');
+  const filteredHeroes = heroes.filter(hero => hero.name.toLowerCase().includes(search.toLowerCase()));
 
   useEffect(() => {
     (async () => {
@@ -27,11 +29,12 @@ function App() {
     <div className={styles.appContainer}>
       <header>
         <h1>COMICS SUPER-HEROES</h1>
+        <input type="search" value={search} onChange={e => setSearch(e.target.value)} />
       </header>
       <main>
         {loading && <Loading />}
         {errorMessage && <ErrorPage message={errorMessage} />}
-        {!loading && !errorMessage && <CardsList heroes={heroes} />}
+        {!loading && !errorMessage && <CardsList heroes={filteredHeroes} />}
       </main>
       <footer className="f3">
         All data and images from <a href="https://akabab.github.io/superhero-api/">superhero-api.com</a>{' '}
