@@ -6,7 +6,7 @@ const DEFAULT_IMAGE =
 
 const Card = ({ name, publisher, image }) => (
   <li className={styles.card}>
-    <img className={styles.cardImage} alt="hero profile" src={image} width="200" height="200" />
+    <img className={styles.cardImage} loading="lazy" alt="hero profile" src={image} width="200" height="200" />
     <div className={styles.cardContent}>
       <h2>{name}</h2>
       <h3>{publisher}</h3>
