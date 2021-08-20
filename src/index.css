@@ -18,8 +18,3 @@ body {
 * {
   outline: none;
 }
-
-#root {
-  width: 100vw;
-  height: 100vh;
-}
