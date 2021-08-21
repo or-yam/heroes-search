@@ -6,3 +6,9 @@
   margin: 12px;
   list-style: none;
 }
+
+.noHeroesMessage {
+  text-align: center;
+  width: 100%;
+  font-size: x-large;
+}
