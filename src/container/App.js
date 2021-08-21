@@ -29,7 +29,12 @@ function App() {
     <div className={styles.appContainer}>
       <header>
         <h1>COMICS SUPER-HEROES</h1>
-        <input type="search" value={search} onChange={e => setSearch(e.target.value)} />
+        <input
+          className={styles.search}
+          placeholder="Insert hero name"
+          type="search"
+          onChange={e => setSearch(e.target.value)}
+        />
       </header>
       <main>
         {loading && <Loading />}
