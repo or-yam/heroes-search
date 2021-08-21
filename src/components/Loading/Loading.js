@@ -1,5 +1,5 @@
 import styles from './Loading.module.css';
 
-const Loading = () => <p>Loading heroes...</p>;
+const Loading = () => <p className={styles.loading}>Loading heroes...</p>;
 
 export default Loading;
