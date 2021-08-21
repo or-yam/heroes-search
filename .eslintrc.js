@@ -26,6 +26,7 @@ module.exports = {
     }
   ],
   rules: {
+    'no-unused-vars': 'warn',
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/react-in-jsx-scope': 0,
     'react/jsx-uses-react': 0,
