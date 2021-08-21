@@ -1,4 +1,3 @@
-# This is a new updated version of this repo :
+# This is a new version of this [Repo](https://github.com/or-yam/superhero-api-app)
 
-## It uses static analesis (eslint & prettier) and will be tested
-
+## It uses static analysis (eslint & prettier) and will be tested
