@@ -3,6 +3,7 @@ import { fetchHeroes } from '../services/api';
 import CardsList from '../components/CardsList/CardsList';
 import Loading from '../components/Loading/Loading';
 import ErrorPage from '../components/ErrorPage/ErrorPage';
+import Search from '../components/Search/Search';
 import styles from './App.module.css';
 
 function App() {
@@ -29,12 +30,7 @@ function App() {
     <div className={styles.appContainer}>
       <header>
         <h1>COMICS SUPER-HEROES</h1>
-        <input
-          className={styles.search}
-          placeholder="Insert hero name"
-          type="search"
-          onChange={e => setSearch(e.target.value)}
-        />
+        <Search setSearch={setSearch} />
       </header>
       <main>
         {loading && <Loading />}
