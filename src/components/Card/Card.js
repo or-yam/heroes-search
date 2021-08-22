@@ -5,7 +5,7 @@ const DEFAULT_IMAGE =
   'https://www.pinclipart.com/picdir/big/560-5604123_silhouette-clipart-superhero-silhouette-superhero-transparent-background-png.png';
 
 const Card = ({ name, publisher, image }) => (
-  <li className={styles.card}>
+  <li className={styles.card} data-testid="hero-card">
     <img className={styles.cardImage} loading="lazy" alt="hero profile" src={image} width="200" height="200" />
     <div className={styles.cardContent}>
       <h2>{name}</h2>

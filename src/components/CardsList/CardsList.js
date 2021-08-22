@@ -10,7 +10,9 @@ const CardList = ({ heroes }) =>
       ))}
     </ul>
   ) : (
-    <p className={styles.noHeroesMessage}>Couldn&apos;t find heroes</p>
+    <p className={styles.noHeroesMessage} data-testid="empty-message">
+      Couldn&apos;t find heroes
+    </p>
   );
 
 CardList.propTypes = {
